@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, Mail, Phone, Linkedin, Globe } from 'lucide-react';
+import { Send, Mail, Phone, Linkedin, Globe, Loader2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, } from 'react';
 import { useLocation } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const ContactSection = () => {
   const { t } = useTranslation();
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -24,9 +26,47 @@ const ContactSection = () => {
     }
   }, [location]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(formData);
+    await sendEmail(formData);
+  };
+  
+  const sendEmail = async (formData: any) => {
+    setIsLoading(true)
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...formData,
+          access_key: import.meta.env.VITE_WEB3FORMS_KEY,
+        }),
+      });
+      console.log(response);
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Error al enviar el formulario');
+      } else {
+        toast.success('Email sent successfully!', {
+          position: 'top-center',
+          autoClose: 3000
+        });
+      }
+    } catch (err) {
+      console.error(err);
+      toast.error(err.message || 'An error occur', {
+        position: 'top-center',
+        autoClose: 3000,
+      });
+    } finally {
+      setIsLoading(false)
+      setFormData({
+        name: '',
+        company: '',
+        email: '',
+        message: '',
+      });
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -117,13 +157,19 @@ const ContactSection = () => {
                   required
                 />
               </div>
-
               <button
                 type="submit"
-                className="w-full flex justify-center items-center px-4 py-2 border border-transparent rounded-md text-base font-medium text-white bg-primary hover:bg-primaryHover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                disabled={isLoading}
+                className="w-full flex justify-center items-center px-4 py-2 border border-transparent rounded-md text-base font-medium text-white bg-primary hover:bg-primaryHover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {t('contact.form.send')}
-                <Send className="ml-2 h-5 w-5" />
+                {isLoading ? (
+                  <Loader2 className="animate-spin h-5 w-5" />
+                ) : (
+                  <>
+                    {t('contact.form.send')}
+                    <Send className="ml-2 h-5 w-5" />
+                  </>
+                )}
               </button>
             </form>
           </motion.div>

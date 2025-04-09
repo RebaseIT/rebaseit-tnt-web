@@ -123,4 +123,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-import { COLORS } from '../assets/colors.js';

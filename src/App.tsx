@@ -11,6 +11,7 @@ import Compliance from './pages/modules/Compliance';
 import Reporting from './pages/modules/Reporting';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
           </Routes>
+          <ToastContainer />
         </main>
         <Footer />
       </div>
