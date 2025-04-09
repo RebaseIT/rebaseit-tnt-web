@@ -64,7 +64,7 @@ const Navbar = () => {
               className="flex items-center text-primary hover:text-primaryHover px-3 py-2 rounded-md text-sm font-medium"
             >
               <Globe className="h-5 w-5 mr-1" />
-              {i18n.language === 'en' ? 'ES' : 'EN'}
+              {i18n.language === 'en' ? 'EN' : 'ES'}
             </button>
             <button
               onClick={() => scrollToSection('contact')}
