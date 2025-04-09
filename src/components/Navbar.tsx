@@ -8,7 +8,8 @@ const Navbar = () => {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = async (sectionId: string) => {
+    await navigate('/');
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
