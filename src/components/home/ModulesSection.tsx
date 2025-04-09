@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { modules } from '../../data/modules';
 
 const moduleContainerVariants = {
@@ -26,6 +27,7 @@ const moduleItemVariants = {
 
 const ModulesSection = () => {
   const navigate = useNavigate();
+  const { t, i18n } = useTranslation();
 
   return (
     <section id="modules" className="py-20 bg-white scroll-mt-16">
@@ -38,10 +40,10 @@ const ModulesSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Nuestros Módulos
+            {t('modules.title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Soluciones completas y modulares para cubrir todas sus necesidades de trazabilidad.
+            {t('modules.subtitle')}
           </p>
         </motion.div>
         
@@ -63,9 +65,13 @@ const ModulesSection = () => {
               <div className="p-6 flex-grow">
                 <div className="flex items-center mb-4">
                   <module.icon className="h-8 w-8 text-blue-600" />
-                  <h3 className="ml-3 text-xl font-semibold text-gray-900">{module.title}</h3>
+                  <h3 className="ml-3 text-xl font-semibold text-gray-900">
+                    {t(`modules.${module.id}.title`)}
+                  </h3>
                 </div>
-                <p className="text-gray-600 mb-4">{module.description}</p>
+                <p className="text-gray-600 mb-4">
+                  {t(`modules.${module.id}.description`)}
+                </p>
                 <ul className="space-y-2">
                   {module.features.slice(0, 3).map((feature, index) => (
                     <li key={index} className="flex items-center text-gray-600">
@@ -77,7 +83,7 @@ const ModulesSection = () => {
               </div>
               <div className="p-6">
                 <button className="w-full text-blue-600 font-medium hover:text-blue-700 focus:outline-none transition-colors duration-200">
-                  Ver detalles →
+                  {i18n.language === 'en' ? 'View details →' : 'Ver detalles →'}
                 </button>
               </div>
             </motion.div>

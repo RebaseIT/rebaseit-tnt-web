@@ -2,13 +2,22 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, GitBranch, Check, ArrowRight } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Trazabilidad = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const handleReturn = () => {
+    navigate('/');
+    setTimeout(() => {
+      document.getElementById('modules')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
 
   return (
     <div className="bg-gray-50 min-h-screen py-12">
@@ -16,11 +25,11 @@ const Trazabilidad = () => {
         <motion.button
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          onClick={() => navigate('/')}
+          onClick={handleReturn}
           className="mb-8 text-blue-600 hover:text-blue-700 font-medium flex items-center"
         >
           <ArrowLeft className="h-5 w-5 mr-2" />
-          Volver al inicio
+          {t('modules.back')}
         </motion.button>
 
         <motion.div
@@ -32,13 +41,12 @@ const Trazabilidad = () => {
           <div className="p-8">
             <div className="flex items-center mb-6">
               <GitBranch className="h-12 w-12 text-blue-600" />
-              <h1 className="ml-4 text-3xl font-bold text-gray-900">Trazabilidad</h1>
+              <h1 className="ml-4 text-3xl font-bold text-gray-900">{t('modules.traceability.title')}</h1>
             </div>
 
             <div className="prose max-w-none">
               <p className="text-xl text-gray-600 mb-8">
-                Sistema integral de trazabilidad basado en el estándar EPCIS para seguimiento end-to-end 
-                de productos en toda la cadena de suministro.
+                {t('modules.traceability.subtitle')}
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
@@ -47,24 +55,16 @@ const Trazabilidad = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 }}
                 >
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4">Características Principales</h2>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                    {t('modules.traceability.features.title')}
+                  </h2>
                   <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600">Integración completa con EPCIS 2.0</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600">Seguimiento en tiempo real de productos</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600">Historial completo de movimientos</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600">Sistema de alertas automáticas</span>
-                    </li>
+                    {t('modules.traceability.features.list', { returnObjects: true }).map((feature, index) => (
+                      <li key={index} className="flex items-start">
+                        <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
+                        <span className="text-gray-600">{feature}</span>
+                      </li>
+                    ))}
                   </ul>
                 </motion.div>
 
@@ -73,24 +73,16 @@ const Trazabilidad = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3 }}
                 >
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4">Beneficios</h2>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                    {t('modules.traceability.benefits.title')}
+                  </h2>
                   <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600">Visibilidad total de la cadena de suministro</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600">Detección temprana de problemas</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600">Mejora en la eficiencia logística</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600">Reducción de pérdidas y mermas</span>
-                    </li>
+                    {t('modules.traceability.benefits.list', { returnObjects: true }).map((benefit, index) => (
+                      <li key={index} className="flex items-start">
+                        <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
+                        <span className="text-gray-600">{benefit}</span>
+                      </li>
+                    ))}
                   </ul>
                 </motion.div>
               </div>
@@ -101,48 +93,34 @@ const Trazabilidad = () => {
                 transition={{ delay: 0.4 }}
                 className="mb-12"
               >
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Especificaciones Técnicas</h2>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                  {t('modules.traceability.technical.title')}
+                </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="bg-gray-50 p-6 rounded-lg">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Capacidades EPCIS</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                      {t('modules.traceability.technical.epcis.title')}
+                    </h3>
                     <ul className="space-y-2">
-                      <li className="flex items-center text-gray-600">
-                        <span className="h-1.5 w-1.5 bg-blue-600 rounded-full mr-2"></span>
-                        Captura de eventos en tiempo real
-                      </li>
-                      <li className="flex items-center text-gray-600">
-                        <span className="h-1.5 w-1.5 bg-blue-600 rounded-full mr-2"></span>
-                        Consultas avanzadas de eventos
-                      </li>
-                      <li className="flex items-center text-gray-600">
-                        <span className="h-1.5 w-1.5 bg-blue-600 rounded-full mr-2"></span>
-                        Integración con sensores IoT
-                      </li>
-                      <li className="flex items-center text-gray-600">
-                        <span className="h-1.5 w-1.5 bg-blue-600 rounded-full mr-2"></span>
-                        Geolocalización en tiempo real
-                      </li>
+                      {t('modules.traceability.technical.epcis.list', { returnObjects: true }).map((item, index) => (
+                        <li key={index} className="flex items-center text-gray-600">
+                          <span className="h-1.5 w-1.5 bg-blue-600 rounded-full mr-2"></span>
+                          {item}
+                        </li>
+                      ))}
                     </ul>
                   </div>
                   <div className="bg-gray-50 p-6 rounded-lg">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Análisis y Reportes</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                      {t('modules.traceability.technical.analysis.title')}
+                    </h3>
                     <ul className="space-y-2">
-                      <li className="flex items-center text-gray-600">
-                        <span className="h-1.5 w-1.5 bg-blue-600 rounded-full mr-2"></span>
-                        Dashboards personalizables
-                      </li>
-                      <li className="flex items-center text-gray-600">
-                        <span className="h-1.5 w-1.5 bg-blue-600 rounded-full mr-2"></span>
-                        Análisis predictivo de rutas
-                      </li>
-                      <li className="flex items-center text-gray-600">
-                        <span className="h-1.5 w-1.5 bg-blue-600 rounded-full mr-2"></span>
-                        Reportes automatizados
-                      </li>
-                      <li className="flex items-center text-gray-600">
-                        <span className="h-1.5 w-1.5 bg-blue-600 rounded-full mr-2"></span>
-                        Exportación de datos
-                      </li>
+                      {t('modules.traceability.technical.analysis.list', { returnObjects: true }).map((item, index) => (
+                        <li key={index} className="flex items-center text-gray-600">
+                          <span className="h-1.5 w-1.5 bg-blue-600 rounded-full mr-2"></span>
+                          {item}
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>
@@ -154,14 +132,16 @@ const Trazabilidad = () => {
                 transition={{ delay: 0.4 }}
                 className="mb-12"
               >
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Visualización de Trazabilidad</h2>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                  {t('modules.traceability.visualization.title')}
+                </h2>
                 <div className="bg-white p-4 rounded-lg shadow">
                   <img
                     src="https://images.unsplash.com/photo-1524669796045-89e93d33c20f?auto=format&fit=crop&w=1200&q=80"
                     alt="Supply Chain Map"
                     className="w-full rounded-lg mb-4"
                   />
-                  <p className="text-sm text-gray-600">Mapa interactivo de la cadena de suministro con tracking en tiempo real</p>
+                  <p className="text-sm text-gray-600">{t('modules.traceability.visualization.map')}</p>
                 </div>
               </motion.div>
 
@@ -171,16 +151,17 @@ const Trazabilidad = () => {
                 transition={{ delay: 0.5 }}
                 className="bg-blue-50 p-8 rounded-lg"
               >
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">¿Por qué elegir nuestra solución?</h2>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                  {t('modules.traceability.why.title')}
+                </h2>
                 <p className="text-gray-600 mb-6">
-                  Nuestra solución de trazabilidad EPCIS proporciona una visibilidad sin precedentes 
-                  de su cadena de suministro, permitiendo decisiones informadas y mejoras operativas continuas.
+                  {t('modules.traceability.why.text')}
                 </p>
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200"
                 >
-                  Solicitar una demo
+                  {t('modules.traceability.why.cta')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </motion.div>

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Star } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
+import { useTranslation } from 'react-i18next';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
@@ -26,6 +27,8 @@ const testimonials = [
 ];
 
 const About = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="about" className="py-16 bg-white scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,11 +39,10 @@ const About = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Transformando la Trazabilidad Industrial
+            {t('about.title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Rebase IT T&T es una plataforma integral que revoluciona la forma en que las empresas 
-            gestionan la trazabilidad, el cumplimiento normativo y la sostenibilidad.
+            {t('about.subtitle')}
           </p>
         </motion.div>
 
@@ -51,9 +53,9 @@ const About = () => {
             viewport={{ once: true }}
             className="bg-gray-50 p-6 rounded-lg"
           >
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Experiencia Global</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('about.experience.title')}</h3>
             <p className="text-gray-600">
-              Más de 10 años de experiencia implementando soluciones de trazabilidad en múltiples industrias.
+              {t('about.experience.text')}
             </p>
           </motion.div>
           <motion.div
@@ -63,9 +65,9 @@ const About = () => {
             transition={{ delay: 0.1 }}
             className="bg-gray-50 p-6 rounded-lg"
           >
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Tecnología Avanzada</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('about.technology.title')}</h3>
             <p className="text-gray-600">
-              Utilizamos las últimas tecnologías y estándares para garantizar soluciones robustas y escalables.
+              {t('about.technology.text')}
             </p>
           </motion.div>
           <motion.div
@@ -75,9 +77,9 @@ const About = () => {
             transition={{ delay: 0.2 }}
             className="bg-gray-50 p-6 rounded-lg"
           >
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Soporte 24/7</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('about.support.title')}</h3>
             <p className="text-gray-600">
-              Equipo de soporte dedicado disponible 24/7 para garantizar la continuidad de sus operaciones.
+              {t('about.support.text')}
             </p>
           </motion.div>
         </div>

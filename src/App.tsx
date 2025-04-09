@@ -9,7 +9,8 @@ import DPP from './pages/modules/DPP';
 import ESG from './pages/modules/ESG';
 import Compliance from './pages/modules/Compliance';
 import Reporting from './pages/modules/Reporting';
-import Contact from './pages/Contact';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
             <Route path="/modules/esg" element={<ESG />} />
             <Route path="/modules/compliance" element={<Compliance />} />
             <Route path="/modules/reporting" element={<Reporting />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
           </Routes>
         </main>
         <Footer />

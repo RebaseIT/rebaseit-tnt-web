@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { solutions } from '../../data/modules';
 
 const moduleContainerVariants = {
@@ -25,6 +26,8 @@ const moduleItemVariants = {
 };
 
 const SolutionsSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="solutions" className="py-20 bg-gray-50 scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,10 +39,10 @@ const SolutionsSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Nuestras Soluciones
+            {t('solutions.title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Elija el plan que mejor se adapte a las necesidades de su empresa.
+            {t('solutions.subtitle')}
           </p>
         </motion.div>
 
@@ -75,7 +78,7 @@ const SolutionsSection = () => {
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                   className="block w-full bg-blue-600 text-white text-center py-2 px-4 rounded-md hover:bg-blue-700 transition duration-200"
                 >
-                  Contactar para más información
+                  {t('contact.cta')}
                 </button>
               </div>
             </motion.div>

@@ -2,13 +2,22 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, FileBarChart, Check, ArrowRight } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const DPP = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const handleReturn = () => {
+    navigate('/');
+    setTimeout(() => {
+      document.getElementById('modules')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
 
   return (
     <div className="bg-gray-50 min-h-screen py-12">
@@ -16,11 +25,11 @@ const DPP = () => {
         <motion.button
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          onClick={() => navigate('/')}
+          onClick={handleReturn}
           className="mb-8 text-blue-600 hover:text-blue-700 font-medium flex items-center"
         >
           <ArrowLeft className="h-5 w-5 mr-2" />
-          Volver al inicio
+          {t('modules.back')}
         </motion.button>
 
         <motion.div
@@ -32,13 +41,12 @@ const DPP = () => {
           <div className="p-8">
             <div className="flex items-center mb-6">
               <FileBarChart className="h-12 w-12 text-blue-600" />
-              <h1 className="ml-4 text-3xl font-bold text-gray-900">Digital Product Passport (DPP)</h1>
+              <h1 className="ml-4 text-3xl font-bold text-gray-900">{t('modules.dpp.title')}</h1>
             </div>
 
             <div className="prose max-w-none">
               <p className="text-xl text-gray-600 mb-8">
-                Pasaporte digital de productos que documenta todo el ciclo de vida e impacto ambiental, 
-                proporcionando transparencia total en la cadena de valor.
+                {t('modules.dpp.subtitle')}
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
@@ -47,24 +55,16 @@ const DPP = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 }}
                 >
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4">Características Principales</h2>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                    {t('modules.dpp.features.title')}
+                  </h2>
                   <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600">Cálculo de huella de carbono</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600">Trazabilidad de materiales</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600">Análisis de ciclo de vida</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600">Información de reciclaje</span>
-                    </li>
+                    {t('modules.dpp.features.list', { returnObjects: true }).map((feature, index) => (
+                      <li key={index} className="flex items-start">
+                        <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
+                        <span className="text-gray-600">{feature}</span>
+                      </li>
+                    ))}
                   </ul>
                 </motion.div>
 
@@ -73,24 +73,16 @@ const DPP = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3 }}
                 >
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4">Beneficios</h2>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                    {t('modules.dpp.benefits.title')}
+                  </h2>
                   <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600">Transparencia en la cadena de valor</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600">Cumplimiento de normativas ambientales</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600">Mejora en la sostenibilidad</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600">Información detallada para consumidores</span>
-                    </li>
+                    {t('modules.dpp.benefits.list', { returnObjects: true }).map((benefit, index) => (
+                      <li key={index} className="flex items-start">
+                        <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
+                        <span className="text-gray-600">{benefit}</span>
+                      </li>
+                    ))}
                   </ul>
                 </motion.div>
               </div>
@@ -101,7 +93,9 @@ const DPP = () => {
                 transition={{ delay: 0.4 }}
                 className="mb-12"
               >
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Análisis de Impacto</h2>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                  {t('modules.dpp.analysis.title')}
+                </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="bg-white p-4 rounded-lg shadow">
                     <img
@@ -109,7 +103,7 @@ const DPP = () => {
                       alt="Material Flow Analysis"
                       className="w-full rounded-lg mb-4"
                     />
-                    <p className="text-sm text-gray-600">Análisis de flujo de materiales y origen de componentes</p>
+                    <p className="text-sm text-gray-600">{t('modules.dpp.analysis.material')}</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg shadow">
                     <img
@@ -117,7 +111,7 @@ const DPP = () => {
                       alt="Carbon Footprint Analysis"
                       className="w-full rounded-lg mb-4"
                     />
-                    <p className="text-sm text-gray-600">Análisis detallado de huella de carbono por producto</p>
+                    <p className="text-sm text-gray-600">{t('modules.dpp.analysis.carbon')}</p>
                   </div>
                 </div>
               </motion.div>
@@ -128,16 +122,17 @@ const DPP = () => {
                 transition={{ delay: 0.5 }}
                 className="bg-blue-50 p-8 rounded-lg"
               >
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">¿Por qué elegir nuestra solución?</h2>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                  {t('modules.dpp.why.title')}
+                </h2>
                 <p className="text-gray-600 mb-6">
-                  Nuestro Digital Product Passport proporciona una visión completa del impacto ambiental 
-                  y social de sus productos, facilitando la toma de decisiones sostenibles y el cumplimiento normativo.
+                  {t('modules.dpp.why.text')}
                 </p>
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200"
                 >
-                  Solicitar una demo
+                  {t('modules.dpp.why.cta')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </motion.div>

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Mail, Phone, Linkedin } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const ContactSection = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -26,9 +28,9 @@ const ContactSection = () => {
     <section id="contact" className="bg-gray-50 py-20 scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Contáctenos</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('contact.title')}</h2>
           <p className="text-lg text-gray-600">
-            Estamos aquí para responder sus preguntas y ayudarle con sus necesidades de trazabilidad.
+            {t('contact.subtitle')}
           </p>
         </div>
 
@@ -42,7 +44,7 @@ const ContactSection = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                  Nombre
+                  {t('contact.form.name')}
                 </label>
                 <input
                   type="text"
@@ -57,7 +59,7 @@ const ContactSection = () => {
 
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700">
-                  Empresa
+                  {t('contact.form.company')}
                 </label>
                 <input
                   type="text"
@@ -72,7 +74,7 @@ const ContactSection = () => {
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                  Email
+                  {t('contact.form.email')}
                 </label>
                 <input
                   type="email"
@@ -87,7 +89,7 @@ const ContactSection = () => {
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                  Mensaje
+                  {t('contact.form.message')}
                 </label>
                 <textarea
                   name="message"
@@ -104,7 +106,7 @@ const ContactSection = () => {
                 type="submit"
                 className="w-full flex justify-center items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
               >
-                Enviar mensaje
+                {t('contact.form.send')}
                 <Send className="ml-2 h-5 w-5" />
               </button>
             </form>
@@ -116,7 +118,7 @@ const ContactSection = () => {
             viewport={{ once: true }}
             className="bg-blue-600 rounded-lg shadow-lg p-8 text-white"
           >
-            <h3 className="text-2xl font-bold mb-6">Información de contacto</h3>
+            <h3 className="text-2xl font-bold mb-6">{t('footer.contact')}</h3>
             
             <div className="space-y-6">
               <div className="flex items-center">
@@ -130,7 +132,7 @@ const ContactSection = () => {
               <div className="flex items-center">
                 <Phone className="h-6 w-6 mr-4" />
                 <div>
-                  <h4 className="font-medium">Teléfono</h4>
+                  <h4 className="font-medium">{t('contact.phone')}</h4>
                   <p>+1 (234) 567-890</p>
                 </div>
               </div>
@@ -144,12 +146,6 @@ const ContactSection = () => {
                   </a>
                 </div>
               </div>
-            </div>
-
-            <div className="mt-12">
-              <h3 className="text-xl font-bold mb-4">Horario de atención</h3>
-              <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
-              <p>Sábado y Domingo: Cerrado</p>
             </div>
           </motion.div>
         </div>

@@ -1,12 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 interface HeroProps {
   scrollToSection: (sectionId: string) => void;
 }
 
 const Hero = ({ scrollToSection }: HeroProps) => {
+  const { t } = useTranslation();
+
   return (
     <motion.section
       id="hero"
@@ -23,24 +26,24 @@ const Hero = ({ scrollToSection }: HeroProps) => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Trazabilidad de Alto Nivel para su Negocio
+              {t('hero.title')}
             </h1>
             <p className="text-xl mb-8">
-              Soluciones completas de trazabilidad con estándares GS1, EPCIS y más.
+              {t('hero.subtitle')}
             </p>
             <div className="space-x-4">
               <button
                 onClick={() => scrollToSection('about')}
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors duration-200"
               >
-                Comencemos
+                {t('hero.cta.start')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
                 className="inline-flex items-center px-6 py-3 border-2 border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-blue-600 transition-colors duration-200"
               >
-                Solicitar Demo
+                {t('hero.cta.demo')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
             </div>

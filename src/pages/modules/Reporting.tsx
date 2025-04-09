@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, BarChart3, Check, ArrowRight } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -30,10 +31,18 @@ ChartJS.register(
 
 const Reporting = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const handleReturn = () => {
+    navigate('/');
+    setTimeout(() => {
+      document.getElementById('modules')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
 
   const lineChartData = {
     labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun'],
@@ -102,11 +111,11 @@ const Reporting = () => {
         <motion.button
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          onClick={() => navigate('/')}
+          onClick={handleReturn}
           className="mb-8 text-blue-600 hover:text-blue-700 font-medium flex items-center"
         >
           <ArrowLeft className="h-5 w-5 mr-2" />
-          Volver al inicio
+          {t('modules.back')}
         </motion.button>
 
         <motion.div
@@ -118,13 +127,12 @@ const Reporting = () => {
           <div className="p-8">
             <div className="flex items-center mb-6">
               <BarChart3 className="h-12 w-12 text-blue-600" />
-              <h1 className="ml-4 text-3xl font-bold text-gray-900">Reporting</h1>
+              <h1 className="ml-4 text-3xl font-bold text-gray-900">{t('modules.reporting.title')}</h1>
             </div>
 
             <div className="prose max-w-none">
               <p className="text-xl text-gray-600 mb-8">
-                Sistema avanzado de reporting y análisis de datos en tiempo real, 
-                permitiendo la toma de decisiones informadas y la optimización de procesos.
+                {t('modules.reporting.subtitle')}
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
@@ -133,24 +141,16 @@ const Reporting = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 }}
                 >
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4">Características Principales</h2>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                    {t('modules.reporting.features.title')}
+                  </h2>
                   <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600">Dashboards personalizados</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600">Alertas en tiempo real</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600">Exportación de datos</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600">Análisis predictivo</span>
-                    </li>
+                    {t('modules.reporting.features.list', { returnObjects: true }).map((feature, index) => (
+                      <li key={index} className="flex items-start">
+                        <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
+                        <span className="text-gray-600">{feature}</span>
+                      </li>
+                    ))}
                   </ul>
                 </motion.div>
 
@@ -159,24 +159,16 @@ const Reporting = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3 }}
                 >
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4">Beneficios</h2>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                    {t('modules.reporting.benefits.title')}
+                  </h2>
                   <ul className="space-y-3">
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600">Toma de decisiones informada</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600">Optimización de procesos</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600">Identificación de tendencias</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-gray-600">Mejora continua</span>
-                    </li>
+                    {t('modules.reporting.benefits.list', { returnObjects: true }).map((benefit, index) => (
+                      <li key={index} className="flex items-start">
+                        <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
+                        <span className="text-gray-600">{benefit}</span>
+                      </li>
+                    ))}
                   </ul>
                 </motion.div>
               </div>
@@ -187,74 +179,66 @@ const Reporting = () => {
                 transition={{ delay: 0.4 }}
                 className="mb-12"
               >
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Especificaciones Técnicas</h2>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                  {t('modules.reporting.technical.title')}
+                </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="bg-gray-50 p-6 rounded-lg">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Visualización de Datos</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                      {t('modules.reporting.technical.visualization.title')}
+                    </h3>
                     <ul className="space-y-2">
-                      <li className="flex items-center text-gray-600">
-                        <span className="h-1.5 w-1.5 bg-blue-600 rounded-full mr-2"></span>
-                        Gráficos interactivos
-                      </li>
-                      <li className="flex items-center text-gray-600">
-                        <span className="h-1.5 w-1.5 bg-blue-600 rounded-full mr-2"></span>
-                        Mapas de calor
-                      </li>
-                      <li className="flex items-center text-gray-600">
-                        <span className="h-1.5 w-1.5 bg-blue-600 rounded-full mr-2"></span>
-                        Tablas dinámicas
-                      </li>
-                      <li className="flex items-center text-gray-600">
-                        <span className="h-1.5 w-1.5 bg-blue-600 rounded-full mr-2"></span>
-                        KPIs en tiempo real
-                      </li>
+                      {t('modules.reporting.technical.visualization.list', { returnObjects: true }).map((item, index) => (
+                        <li key={index} className="flex items-center text-gray-600">
+                          <span className="h-1.5 w-1.5 bg-blue-600 rounded-full mr-2"></span>
+                          {item}
+                        </li>
+                      ))}
                     </ul>
                   </div>
                   <div className="bg-gray-50 p-6 rounded-lg">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Integración y Exportación</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                      {t('modules.reporting.technical.integration.title')}
+                    </h3>
                     <ul className="space-y-2">
-                      <li className="flex items-center text-gray-600">
-                        <span className="h-1.5 w-1.5 bg-blue-600 rounded-full mr-2"></span>
-                        Conexión con bases de datos
-                      </li>
-                      <li className="flex items-center text-gray-600">
-                        <span className="h-1.5 w-1.5 bg-blue-600 rounded-full mr-2"></span>
-                        API para integración
-                      </li>
-                      <li className="flex items-center text-gray-600">
-                        <span className="h-1.5 w-1.5 bg-blue-600 rounded-full mr-2"></span>
-                        Exportación en Excel, PDF, CSV
-                      </li>
-                      <li className="flex items-center text-gray-600">
-                        <span className="h-1.5 w-1.5 bg-blue-600 rounded-full mr-2"></span>
-                        Programación de reportes
-                      </li>
+                      {t('modules.reporting.technical.integration.list', { returnObjects: true }).map((item, index) => (
+                        <li key={index} className="flex items-center text-gray-600">
+                          <span className="h-1.5 w-1.5 bg-blue-600 rounded-full mr-2"></span>
+                          {item}
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>
               </motion.div>
 
-              
-              {/* Charts Section */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
                 className="mb-12"
               >
-                <h2 className="text-2xl font-semibold text-gray-900 mb-8">Dashboard de ejemplo</h2>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-8">
+                  {t('modules.reporting.dashboard.title')}
+                </h2>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
                   <div className="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Tendencias de Trazabilidad</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                      {t('modules.reporting.dashboard.trends')}
+                    </h3>
                     <Line data={lineChartData} options={chartOptions} />
                   </div>
                   <div className="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Cumplimiento por Sector</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                      {t('modules.reporting.dashboard.compliance')}
+                    </h3>
                     <Bar data={barChartData} options={chartOptions} />
                   </div>
                 </div>
                 <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Estado de Procesos</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                    {t('modules.reporting.dashboard.processes')}
+                  </h3>
                   <Doughnut data={doughnutChartData} options={chartOptions} />
                 </div>
               </motion.div>
@@ -265,16 +249,17 @@ const Reporting = () => {
                 transition={{ delay: 0.5 }}
                 className="bg-blue-50 p-8 rounded-lg"
               >
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">¿Por qué elegir nuestra solución?</h2>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                  {t('modules.reporting.why.title')}
+                </h2>
                 <p className="text-gray-600 mb-6">
-                  Nuestra solución de reporting proporciona una plataforma completa para analizar sus datos, 
-                  identificar tendencias y optimizar sus procesos, permitiendo una mejora continua en su negocio.
+                  {t('modules.reporting.why.text')}
                 </p>
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200"
                 >
-                  Solicitar una demo
+                  {t('modules.reporting.why.cta')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </motion.div>
