@@ -16,7 +16,7 @@ const Hero = ({ scrollToSection }: HeroProps) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="relative bg-blue-600 text-white py-20"
+      className="relative bg-secondary text-white py-20"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -25,23 +25,23 @@ const Hero = ({ scrollToSection }: HeroProps) => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
               {t('hero.title')}
             </h1>
-            <p className="text-xl mb-8">
+            <p className="text-xl mb-8 text-black">
               {t('hero.subtitle')}
             </p>
             <div className="space-x-4">
               <button
                 onClick={() => scrollToSection('about')}
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors duration-200"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primaryHover transition-colors duration-200"
               >
                 {t('hero.cta.start')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="inline-flex items-center px-6 py-3 border-2 border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-blue-600 transition-colors duration-200"
+                className="inline-flex items-center px-6 py-3 border-2 border-primary text-base font-medium rounded-md text-primary hover:bg-cyan-50 hover:text-primaryHover transition-colors duration-200"
               >
                 {t('hero.cta.demo')}
                 <ArrowRight className="ml-2 h-5 w-5" />

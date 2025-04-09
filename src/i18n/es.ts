@@ -15,7 +15,7 @@ export const esTranslations = {
   },
   about: {
     title: 'Transformando la Trazabilidad Industrial',
-    subtitle: 'Rebase IT T&T es una plataforma integral que revoluciona la forma en que las empresas gestionan la trazabilidad, el cumplimiento normativo y la sostenibilidad.',
+    subtitle: 'Rebase T&T es una plataforma integral que revoluciona la forma en que las empresas gestionan la trazabilidad, el cumplimiento normativo y la sostenibilidad.',
     experience: {
       title: 'Experiencia Global',
       text: 'Más de 10 años de experiencia implementando soluciones de trazabilidad en múltiples industrias.'
@@ -324,7 +324,20 @@ export const esTranslations = {
   },
   solutions: {
     title: 'Nuestras Soluciones',
-    subtitle: 'Elija el plan que mejor se adapte a las necesidades de su empresa.'
+    subtitle: 'Elija el plan que mejor se adapte a las necesidades de su empresa.',
+    light: {
+      name: 'T&T Light',
+      description: 'Ideal para pequeñas industrias',
+      price: 'Consultar precio',
+      features: [
+        'Hasta 5 millones de items/año',
+        'Soporte por correo electrónico',
+        '10 usuarios incluidos',
+        'Acceso web básico',
+        'Almacenamiento estándar',
+        'Actualizaciones incluidas'
+      ]
+    }
   },
   contact: {
     title: 'Contáctenos',
@@ -336,7 +349,7 @@ export const esTranslations = {
       message: 'Mensaje',
       send: 'Enviar mensaje'
     },
-    cta: 'Contactar para más información',
+    cta: 'Más información',
     phone: 'Teléfono'
   },
   footer: {

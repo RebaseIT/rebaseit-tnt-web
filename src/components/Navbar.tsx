@@ -32,8 +32,10 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <button onClick={handleLogoClick} className="flex items-center">
-              <Hexagon className="h-8 w-8 text-blue-600" />
-              <span className="ml-2 text-xl font-bold text-gray-900">Rebase IT T&T</span>
+              <img
+                src="src/public/logos/TrackAndTraceLogo.png"
+                style={{ width: "120px", height: "auto" }}
+              />
             </button>
           </div>
 
@@ -41,34 +43,34 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection('hero')}
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              className="text-primary hover:text-primaryHover px-3 py-2 rounded-md text-sm font-medium"
             >
               {t('nav.home')}
             </button>
             <button
               onClick={() => scrollToSection('modules')}
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              className="text-primary hover:text-primaryHover px-3 py-2 rounded-md text-sm font-medium"
             >
               {t('nav.modules')}
             </button>
             <button
               onClick={() => scrollToSection('solutions')}
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              className="text-primary hover:text-primaryHover px-3 py-2 rounded-md text-sm font-medium"
             >
               {t('nav.solutions')}
             </button>
             <button
-              onClick={() => scrollToSection('contact')}
-              className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700"
-            >
-              {t('nav.contact')}
-            </button>
-            <button
               onClick={toggleLanguage}
-              className="flex items-center text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+              className="flex items-center text-primary hover:text-primaryHover px-3 py-2 rounded-md text-sm font-medium"
             >
               <Globe className="h-5 w-5 mr-1" />
               {i18n.language === 'en' ? 'ES' : 'EN'}
+            </button>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-primaryHover"
+            >
+              {t('nav.contact')}
             </button>
           </div>
 
@@ -76,7 +78,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center space-x-4">
             <button
               onClick={toggleLanguage}
-              className="flex items-center text-gray-700 hover:text-blue-600 p-2"
+              className="flex items-center text-primary hover:text-primaryHover p-2"
             >
               <Globe className="h-5 w-5" />
             </button>
@@ -96,19 +98,19 @@ const Navbar = () => {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <button
               onClick={() => scrollToSection('modules')}
-              className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+              className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-primary hover:text-gray-900 hover:bg-gray-50"
             >
               {t('nav.modules')}
             </button>
             <button
               onClick={() => scrollToSection('solutions')}
-              className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+              className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-primary hover:text-gray-900 hover:bg-gray-50"
             >
               {t('nav.solutions')}
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="block w-full text-left px-3 py-2 rounded-md text-base font-medium bg-blue-600 text-white hover:bg-blue-700"
+              className="block w-full text-left px-3 py-2 rounded-md text-base font-medium bg-primary text-white hover:bg-primaryHover"
             >
               {t('nav.contact')}
             </button>
@@ -120,3 +122,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+import { COLORS } from '../assets/colors.js';

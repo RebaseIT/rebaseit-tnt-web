@@ -15,7 +15,7 @@ export const enTranslations = {
   },
   about: {
     title: 'Transforming Industrial Traceability',
-    subtitle: 'Rebase IT T&T is a comprehensive platform that revolutionizes how companies manage traceability, regulatory compliance, and sustainability.',
+    subtitle: 'Rebase T&T is a comprehensive platform that revolutionizes how companies manage traceability, regulatory compliance, and sustainability.',
     experience: {
       title: 'Global Experience',
       text: 'Over 10 years of experience implementing traceability solutions across multiple industries.'
@@ -336,7 +336,7 @@ export const enTranslations = {
       message: 'Message',
       send: 'Send Message'
     },
-    cta: 'Contact for more information',
+    cta: 'More information',
     phone: 'Phone'
   },
   footer: {

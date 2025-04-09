@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, Mail, Phone, Linkedin } from 'lucide-react';
+import { Send, Mail, Phone, Linkedin, Globe } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const ContactSection = () => {
   const { t } = useTranslation();
@@ -11,6 +13,16 @@ const ContactSection = () => {
     email: '',
     message: '',
   });
+  const location = useLocation();
+  const contactRef = useRef(null);
+
+  useEffect(() => {
+    if (location.state?.scrollTo === 'contact') {
+      setTimeout(() => {
+        contactRef.current?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  }, [location]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -25,10 +37,10 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="bg-gray-50 py-20 scroll-mt-16">
+    <section id="contact" ref={contactRef} className="bg-gray-50 py-20 scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('contact.title')}</h2>
+          <h2 className="text-4xl font-bold text-gradient mb-4">{t('contact.title')}</h2>
           <p className="text-lg text-gray-600">
             {t('contact.subtitle')}
           </p>
@@ -39,7 +51,7 @@ const ContactSection = () => {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-white rounded-lg shadow-lg p-8"
+            className="bg-secondaryHover rounded-lg shadow-lg p-8"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -52,7 +64,8 @@ const ContactSection = () => {
                   id="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  style={{ height: "40px", borderWidth: "1px"}}
+                  className="pl-2 mt-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                   required
                 />
               </div>
@@ -67,7 +80,8 @@ const ContactSection = () => {
                   id="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  style={{ height: "40px", borderWidth: "1px"}}
+                  className="pl-2 mt-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                   required
                 />
               </div>
@@ -82,7 +96,8 @@ const ContactSection = () => {
                   id="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  style={{ height: "40px", borderWidth: "1px"}}
+                  className="pl-2 mt-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                   required
                 />
               </div>
@@ -97,14 +112,15 @@ const ContactSection = () => {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  style={{ resize: 'none', borderWidth: "1px" }}
+                  className="pl-2 mt-3 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
                   required
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full flex justify-center items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                className="w-full flex justify-center items-center px-4 py-2 border border-transparent rounded-md text-base font-medium text-white bg-primary hover:bg-primaryHover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
               >
                 {t('contact.form.send')}
                 <Send className="ml-2 h-5 w-5" />
@@ -116,11 +132,14 @@ const ContactSection = () => {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-blue-600 rounded-lg shadow-lg p-8 text-white"
+            style={{
+              background: 'linear-gradient(330deg, #0470b8 36.44%, #88abfe 100%)'
+            }}
+            className="rounded-lg shadow-lg p-8 text-white"
           >
-            <h3 className="text-2xl font-bold mb-6">{t('footer.contact')}</h3>
+            <h3 className="text-2xl font-bold mb-8">{t('footer.contact')}</h3>
             
-            <div className="space-y-6">
+            <div className="space-y-10">
               <div className="flex items-center">
                 <Mail className="h-6 w-6 mr-4" />
                 <div>
@@ -133,7 +152,7 @@ const ContactSection = () => {
                 <Phone className="h-6 w-6 mr-4" />
                 <div>
                   <h4 className="font-medium">{t('contact.phone')}</h4>
-                  <p>+1 (234) 567-890</p>
+                  <p>+1 (302) 244-7907</p>
                 </div>
               </div>
 
@@ -141,8 +160,17 @@ const ContactSection = () => {
                 <Linkedin className="h-6 w-6 mr-4" />
                 <div>
                   <h4 className="font-medium">LinkedIn</h4>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                    Rebase IT T&T
+                  <a href="https://www.linkedin.com/company/rebase-it/" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                    Rebase IT
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-center">
+                <Globe className="h-6 w-6 mr-4" />
+                <div>
+                  <h4 className="font-medium">Official Web</h4>
+                  <a href="https://rebaseit.tech/" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                    Rebase IT
                   </a>
                 </div>
               </div>

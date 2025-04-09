@@ -13,13 +13,13 @@ const Terms = () => {
           className="bg-white rounded-lg shadow-lg p-8"
         >
           <div className="flex items-center mb-8">
-            <ScrollText className="h-8 w-8 text-blue-600" />
+            <ScrollText className="h-8 w-8 text-primary" />
             <h1 className="ml-3 text-3xl font-bold text-gray-900">Términos y Condiciones</h1>
           </div>
 
           <div className="prose max-w-none">
             <p className="text-gray-600 mb-6">
-              Al utilizar los servicios de Rebase IT T&T, usted acepta cumplir y estar sujeto a los siguientes términos y condiciones.
+              Al utilizar los servicios de Rebase T&T, usted acepta cumplir y estar sujeto a los siguientes términos y condiciones.
             </p>
 
             <h2 className="text-xl font-semibold text-gray-900 mt-8 mb-4">Uso del Servicio</h2>

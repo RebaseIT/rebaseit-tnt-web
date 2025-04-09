@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import Serializacion from './pages/modules/Serializacion';
+import Serializacion from './pages/modules/Serialization';
 import Trazabilidad from './pages/modules/Trazabilidad';
 import DPP from './pages/modules/DPP';
 import ESG from './pages/modules/ESG';
@@ -20,8 +20,8 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/modules/serializacion" element={<Serializacion />} />
-            <Route path="/modules/trazabilidad" element={<Trazabilidad />} />
+            <Route path="/modules/serialization" element={<Serializacion />} />
+            <Route path="/modules/traceability" element={<Trazabilidad />} />
             <Route path="/modules/dpp" element={<DPP />} />
             <Route path="/modules/esg" element={<ESG />} />
             <Route path="/modules/compliance" element={<Compliance />} />

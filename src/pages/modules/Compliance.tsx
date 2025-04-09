@@ -26,7 +26,7 @@ const Compliance = () => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           onClick={handleReturn}
-          className="mb-8 text-blue-600 hover:text-blue-700 font-medium flex items-center"
+          className="mb-8 text-primary hover:text-primaryHover font-medium flex items-center"
         >
           <ArrowLeft className="h-5 w-5 mr-2" />
           {t('modules.back')}
@@ -40,7 +40,7 @@ const Compliance = () => {
         >
           <div className="p-8">
             <div className="flex items-center mb-6">
-              <Scale className="h-12 w-12 text-blue-600" />
+              <Scale className="h-12 w-12 text-primary" />
               <h1 className="ml-4 text-3xl font-bold text-gray-900">{t('modules.compliance.title')}</h1>
             </div>
 
@@ -104,7 +104,7 @@ const Compliance = () => {
                     <ul className="space-y-2">
                       {t('modules.compliance.technical.verification.list', { returnObjects: true }).map((item, index) => (
                         <li key={index} className="flex items-center text-gray-600">
-                          <span className="h-1.5 w-1.5 bg-blue-600 rounded-full mr-2"></span>
+                          <span className="h-1.5 w-1.5 bg-primary rounded-full mr-2"></span>
                           {item}
                         </li>
                       ))}
@@ -117,7 +117,7 @@ const Compliance = () => {
                     <ul className="space-y-2">
                       {t('modules.compliance.technical.management.list', { returnObjects: true }).map((item, index) => (
                         <li key={index} className="flex items-center text-gray-600">
-                          <span className="h-1.5 w-1.5 bg-blue-600 rounded-full mr-2"></span>
+                          <span className="h-1.5 w-1.5 bg-primary rounded-full mr-2"></span>
                           {item}
                         </li>
                       ))}
@@ -139,8 +139,9 @@ const Compliance = () => {
                   {t('modules.compliance.why.text')}
                 </p>
                 <Link
-                  to="/contact"
-                  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200"
+                  to="/"
+                  state={{ scrollTo: 'contact' }}
+                  className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-md hover:bg-primaryHover transition-colors duration-200"
                 >
                   {t('modules.compliance.why.cta')}
                   <ArrowRight className="ml-2 h-5 w-5" />

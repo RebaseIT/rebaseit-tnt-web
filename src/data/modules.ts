@@ -2,7 +2,7 @@ import { QrCode, GitBranch, FileBarChart, Leaf, Scale, BarChart3 } from 'lucide-
 
 export const modules = [
   {
-    id: 'serializacion',
+    id: 'serialization',
     title: 'Serialización',
     icon: QrCode,
     description: 'Generación de códigos de series únicos y etiquetas bajo el estándar GS1.',
@@ -29,7 +29,7 @@ export const modules = [
     }
   },
   {
-    id: 'trazabilidad',
+    id: 'traceability',
     title: 'Trazabilidad',
     icon: GitBranch,
     description: 'Seguimiento de productos desde el origen hasta su destino con EPCIS.',

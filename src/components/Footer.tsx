@@ -1,5 +1,5 @@
 import React from 'react';
-import { Linkedin, Mail, Phone, Hexagon } from 'lucide-react';
+import { Linkedin, Mail, Phone} from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
@@ -12,8 +12,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center">
-              <Hexagon className="h-8 w-8 text-blue-500" />
-              <span className="ml-2 text-xl font-bold">Rebase IT T&T</span>
+              <img
+                src="src/public/logos/ReBaseLogo.png"
+                style={{ width: "35px", height: "auto" }}
+              />
+              <span className="ml-2 text-xl font-bold">Rebase Track & Trace</span>
             </div>
             <p className="mt-4 text-gray-400">
               {t('hero.subtitle')}
@@ -29,9 +32,9 @@ const Footer = () => {
               </a>
               <a href="tel:+1234567890" className="flex items-center text-gray-400 hover:text-white">
                 <Phone className="h-5 w-5 mr-2" />
-                +1 (234) 567-890
+                +1 (302) 244-7907
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-400 hover:text-white">
+              <a href="https://www.linkedin.com/company/rebase-it/" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-400 hover:text-white">
                 <Linkedin className="h-5 w-5 mr-2" />
                 LinkedIn
               </a>
@@ -56,7 +59,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Rebase IT T&T. {t('footer.rights')}</p>
+          <p>&copy; {new Date().getFullYear()} Rebase IT Track & Trace. {t('footer.rights')}</p>
         </div>
       </div>
     </footer>

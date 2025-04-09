@@ -38,7 +38,7 @@ const SolutionsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-gradient mb-4">
             {t('solutions.title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -61,7 +61,7 @@ const SolutionsSection = () => {
               className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col"
             >
               <div className="p-8 flex-grow">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{solution.name}</h3>
+                <h3 className="text-2xl font-bold text-gradient text-center mb-6">{solution.name}</h3>
                 <p className="text-gray-600 mb-4">{solution.description}</p>
                 <p className="text-lg text-gray-700 mb-6">{solution.price}</p>
                 <ul className="space-y-4">
@@ -76,7 +76,7 @@ const SolutionsSection = () => {
               <div className="p-6">
                 <button
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="block w-full bg-blue-600 text-white text-center py-2 px-4 rounded-md hover:bg-blue-700 transition duration-200"
+                  className="block w-full bg-primary text-white text-center py-2 px-4 rounded-md hover:bg-primaryHover transition duration-200"
                 >
                   {t('contact.cta')}
                 </button>
