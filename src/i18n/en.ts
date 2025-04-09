@@ -29,6 +29,14 @@ export const enTranslations = {
       text: 'Dedicated support team available 24/7 to ensure continuity of your operations.'
     }
   },
+  clients: {
+    title: 'What our clients say',
+    comments: {
+      mariaGonzalez: 'The implementation of TNT has revolutionized our supply chain. Traceability is now more accurate than ever.',
+      carlosRodriguez: 'The ESG module has greatly helped us improve our sustainability reporting and regulatory compliance.',
+      anaMartinez: 'The ease of use and the power of the reporting dashboards have exceeded all our expectations.'
+    }
+  },
   modules: {
     title: 'Our Modules',
     subtitle: 'Complete and modular solutions to cover all your traceability needs.',
