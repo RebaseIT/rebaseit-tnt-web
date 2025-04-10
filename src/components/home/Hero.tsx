@@ -52,13 +52,15 @@ const Hero = ({ scrollToSection }: HeroProps) => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="hidden md:block"
+            className="hidden md:block items-center"
           >
-            <img
-              src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-              alt="Supply Chain Visualization"
-              className="rounded-lg shadow-xl"
-            />
+            <div className='flex justify-center'>
+              <img
+                src="src/public/landing/heroPicture.png"
+                className="rounded-lg shadow-xl"
+                style={{ width: "480px", height: "auto" }}
+              />
+            </div>
           </motion.div>
         </div>
       </div>
