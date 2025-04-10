@@ -2,6 +2,7 @@ import React from 'react';
 import { Linkedin, Mail, Phone} from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import logo from "../public/logos/ReBaseLogo.png";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -13,7 +14,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center">
               <img
-                src="src/public/logos/ReBaseLogo.png"
+                src={logo}
                 style={{ width: "35px", height: "auto" }}
               />
               <span className="ml-2 text-xl font-bold">Rebase Track & Trace</span>

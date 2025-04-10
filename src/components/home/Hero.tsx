@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import heroPicture from "../../public/landing/heroPicture.png";
 
 interface HeroProps {
   scrollToSection: (sectionId: string) => void;
@@ -56,7 +57,7 @@ const Hero = ({ scrollToSection }: HeroProps) => {
           >
             <div className='flex justify-center'>
               <img
-                src="src/public/landing/heroPicture.png"
+                src={heroPicture}
                 className="rounded-lg shadow-xl"
                 style={{ width: "480px", height: "auto" }}
               />

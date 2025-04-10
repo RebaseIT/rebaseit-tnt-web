@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, GitBranch, Check, ArrowRight } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import realTimeTrackingPicture from "../../public/modules/traceability/realTimeTracking.png";
 
 const Trazabilidad = () => {
   const navigate = useNavigate();
@@ -137,7 +138,7 @@ const Trazabilidad = () => {
                 </h2>
                 <div className="bg-white p-4 rounded-lg shadow">
                   <img
-                    src="https://images.unsplash.com/photo-1524669796045-89e93d33c20f?auto=format&fit=crop&w=1200&q=80"
+                    src={realTimeTrackingPicture}
                     alt="Supply Chain Map"
                     className="w-full rounded-lg mb-4"
                   />

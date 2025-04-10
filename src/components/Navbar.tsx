@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, Hexagon, Globe } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import logo from "../public/logos/TrackAndTraceLogo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +35,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <button onClick={handleLogoClick} className="flex items-center">
               <img
-                src="src/public/logos/TrackAndTraceLogo.png"
+                src={logo}
                 style={{ width: "120px", height: "auto" }}
               />
             </button>
