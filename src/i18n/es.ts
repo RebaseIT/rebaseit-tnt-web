@@ -393,6 +393,33 @@ export const esTranslations = {
         'Almacenamiento estándar',
         'Actualizaciones incluidas'
       ]
+    },
+    full: {
+      description: 'Perfecto para empresas medianas',
+      price: 'Consultar precio',
+      features: [
+        'Hasta 20 millones de items/año',
+        'Soporte 24/7 por correo y teléfono',
+        '20 usuarios incluidos',
+        'Acceso web y API',
+        'Gestión de permisos avanzados',
+        'Infraestructura escalable',
+        'Redundancia incluida'
+      ]
+    },
+    enterprise: {
+      description: 'Solución para grandes industrias',
+      price: 'Consultar precio',
+      features: [
+        'Hasta 20.000 millones de items/año',
+        'Soporte 24/7 prioritario',
+        'Usuarios ilimitados',
+        'API personalizada',
+        'Personalización completa',
+        'Infraestructura dedicada',
+        'Alta disponibilidad',
+        'Acuerdo de nivel de servicio (SLA)'
+      ]
     }
   },
   contact: {

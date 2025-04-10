@@ -380,7 +380,47 @@ export const enTranslations = {
   },
   solutions: {
     title: 'Our Solutions',
-    subtitle: 'Choose the plan that best fits your company\'s needs.'
+    subtitle: 'Choose the plan that best fits your company\'s needs.',
+    light: {
+      name: 'T&T Light',
+      description: 'Ideal for small industries',
+      price: 'Contact for pricing',
+      features: [
+        'Up to 5 million items/year',
+        'Email support',
+        '10 users included',
+        'Basic web access',
+        'Standard storage',
+        'Updates included'
+      ]
+    },
+    full: {
+      description: 'Perfect for medium-sized companies',
+      price: 'Contact for pricing',
+      features: [
+        'Up to 20 million items/year',
+        '24/7 email and phone support',
+        '20 users included',
+        'Web and API access',
+        'Advanced permission management',
+        'Scalable infrastructure',
+        'Redundancy included'
+      ]
+    },
+    enterprise: {
+      description: 'Solution for large industries',
+      price: 'Contact for pricing',
+      features: [
+        'Up to 20 billion items/year',
+        'Priority 24/7 support',
+        'Unlimited users',
+        'Custom API',
+        'Full customization',
+        'Dedicated infrastructure',
+        'High availability',
+        'Service Level Agreement (SLA)'
+      ]
+    }    
   },
   contact: {
     title: 'Contact Us',

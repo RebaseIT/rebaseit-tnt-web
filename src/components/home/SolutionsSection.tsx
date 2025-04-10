@@ -62,10 +62,10 @@ const SolutionsSection = () => {
             >
               <div className="p-8 flex-grow">
                 <h3 className="text-2xl font-bold text-gradient text-center mb-6">{solution.name}</h3>
-                <p className="text-gray-600 mb-4">{solution.description}</p>
-                <p className="text-lg text-gray-700 mb-6">{solution.price}</p>
+                <p className="text-gray-600 mb-4">{t(`solutions.${solution.id}.description`)}</p>
+                <p className="text-lg text-gray-700 mb-6">{t(`solutions.${solution.id}.price`)}</p>
                 <ul className="space-y-4">
-                  {solution.features.map((feature, featureIndex) => (
+                  {t(`solutions.${solution.id}.features`, { returnObjects: true }).map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
                       <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
                       <span className="text-gray-600">{feature}</span>
