@@ -176,7 +176,7 @@ export const enTranslations = {
       analysis: {
         title: 'Impact Analysis',
         material: 'Material flow analysis and component origin',
-        carbon: 'Detailed carbon footprint analysis by product'
+        carbon: 'Carbon footprint analysis by product'
       },
       why: {
         title: 'Why Choose Our Solution?',
@@ -249,7 +249,8 @@ export const enTranslations = {
         environmental: 'Management of environmental and sustainability certificates',
         surveys: 'Anonymous employee survey system',
         gender: 'Gender equity metrics dashboard',
-        reporting: 'Secure anonymous reporting system'
+        reporting: 'Secure anonymous reporting system',
+        metrics: 'ESG metrics dashboard'
       },
       why: {
         title: 'Why Choose Our Solution?',

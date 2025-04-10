@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, QrCode, Check, ArrowRight } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import gs1LabelPicture from "../../public/modules/serialization/GS1Label.jpeg";
+import dataMatrixPicture from "../../public/modules/serialization/dataMatrix.jpeg";
 
 const Serializacion = () => {
   const navigate = useNavigate();
@@ -99,7 +101,7 @@ const Serializacion = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="bg-white p-4 rounded-lg shadow">
                     <img
-                      src="https://images.unsplash.com/photo-1642427749670-f20e2e76ed8c?auto=format&fit=crop&w=800&q=80"
+                      src={gs1LabelPicture}
                       alt="QR Code Label Example"
                       className="w-full rounded-lg mb-4"
                     />
@@ -107,7 +109,7 @@ const Serializacion = () => {
                   </div>
                   <div className="bg-white p-4 rounded-lg shadow">
                     <img
-                      src="https://images.unsplash.com/photo-1595079676339-1534801ad6cf?auto=format&fit=crop&w=800&q=80"
+                      src={dataMatrixPicture}
                       alt="DataMatrix Label Example"
                       className="w-full rounded-lg mb-4"
                     />

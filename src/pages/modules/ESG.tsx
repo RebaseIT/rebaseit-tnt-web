@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Leaf, Check, ArrowRight } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import esgPicture from "../../public/modules/esg/esgPicture.jpg";
+import esgSurveys from "../../public/modules/esg/surveys.jpeg";
 
 const ESG = () => {
   const navigate = useNavigate();
@@ -159,35 +161,19 @@ const ESG = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="bg-white p-4 rounded-lg shadow">
                     <img
-                      src="https://images.unsplash.com/photo-1599058917765-a780eda07a3e?auto=format&fit=crop&w=800&q=80"
-                      alt="Environmental Certificates"
+                      src={esgPicture}
+                      alt="ESG Metrics"
                       className="w-full rounded-lg mb-4"
                     />
-                    <p className="text-sm text-gray-600">{t('modules.esg.certificates.environmental')}</p>
+                    <p className="text-sm text-gray-600">{t('modules.esg.certificates.metrics')}</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg shadow">
                     <img
-                      src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?auto=format&fit=crop&w=800&q=80"
+                      src={esgSurveys}
                       alt="Anonymous Survey System"
                       className="w-full rounded-lg mb-4"
                     />
                     <p className="text-sm text-gray-600">{t('modules.esg.certificates.surveys')}</p>
-                  </div>
-                  <div className="bg-white p-4 rounded-lg shadow">
-                    <img
-                      src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=800&q=80"
-                      alt="Gender Equity Analytics"
-                      className="w-full rounded-lg mb-4"
-                    />
-                    <p className="text-sm text-gray-600">{t('modules.esg.certificates.gender')}</p>
-                  </div>
-                  <div className="bg-white p-4 rounded-lg shadow">
-                    <img
-                      src="https://images.unsplash.com/photo-1553484771-047a44eee27a?auto=format&fit=crop&w=800&q=80"
-                      alt="Anonymous Reporting System"
-                      className="w-full rounded-lg mb-4"
-                    />
-                    <p className="text-sm text-gray-600">{t('modules.esg.certificates.reporting')}</p>
                   </div>
                 </div>
               </motion.div>

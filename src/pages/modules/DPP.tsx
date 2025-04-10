@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, FileBarChart, Check, ArrowRight } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import dppPicture from "../../public/modules/dpp/dpp.jpeg";
+import carbonFootprintPicture from "../../public/modules/dpp/carbonFootprint.jpeg";
 
 const DPP = () => {
   const navigate = useNavigate();
@@ -99,15 +101,15 @@ const DPP = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="bg-white p-4 rounded-lg shadow">
                     <img
-                      src="https://images.unsplash.com/photo-1512758017271-d7b84c2113f1?auto=format&fit=crop&w=800&q=80"
-                      alt="Material Flow Analysis"
+                      src={dppPicture}
+                      alt="DPP"
                       className="w-full rounded-lg mb-4"
                     />
                     <p className="text-sm text-gray-600">{t('modules.dpp.analysis.material')}</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg shadow">
                     <img
-                      src="https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?auto=format&fit=crop&w=800&q=80"
+                      src={carbonFootprintPicture}
                       alt="Carbon Footprint Analysis"
                       className="w-full rounded-lg mb-4"
                     />

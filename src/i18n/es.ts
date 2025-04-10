@@ -176,7 +176,7 @@ export const esTranslations = {
       analysis: {
         title: 'Análisis de Impacto',
         material: 'Análisis de flujo de materiales y origen de componentes',
-        carbon: 'Análisis detallado de huella de carbono por producto'
+        carbon: 'Análisis de huella de carbono por producto'
       },
       why: {
         title: '¿Por qué elegir nuestra solución?',
@@ -249,7 +249,8 @@ export const esTranslations = {
         environmental: 'Gestión de certificados ambientales y de sostenibilidad',
         surveys: 'Sistema de encuestas anónimas para empleados',
         gender: 'Dashboard de métricas de equidad de género',
-        reporting: 'Sistema seguro de denuncias anónimas'
+        reporting: 'Sistema seguro de denuncias anónimas',
+        metrics: 'Dashboard de métricas ESG y sostenibilidad'
       },
       why: {
         title: '¿Por qué elegir nuestra solución?',
