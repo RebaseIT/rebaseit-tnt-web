@@ -32,17 +32,17 @@ const Hero = ({ scrollToSection }: HeroProps) => {
             <p className="text-xl mb-8 text-black">
               {t('hero.subtitle')}
             </p>
-            <div className="space-x-4">
+            <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
               <button
                 onClick={() => scrollToSection('about')}
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primaryHover transition-colors duration-200"
+                className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primaryHover transition-colors duration-200"
               >
                 {t('hero.cta.start')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="inline-flex items-center px-6 py-3 border-2 border-primary text-base font-medium rounded-md text-primary hover:bg-cyan-50 hover:text-primaryHover transition-colors duration-200"
+                className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-base font-medium rounded-md text-primary hover:bg-cyan-50 hover:text-primaryHover transition-colors duration-200"
               >
                 {t('hero.cta.demo')}
                 <ArrowRight className="ml-2 h-5 w-5" />
