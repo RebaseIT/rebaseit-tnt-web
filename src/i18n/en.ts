@@ -45,6 +45,14 @@ export const enTranslations = {
       title: 'Serialization',
       description: 'Generation of unique serial codes and labels under GS1 standard.',
       subtitle: 'Advanced serialization system that complies with international GS1 standards, enabling complete and secure product traceability.',
+      mainPageFeatures: {
+        list: [
+          'Unique serial codes',
+          'GS1-compliant labels',
+          'Batch management',
+          'Production control'
+        ]
+      },
       features: {
         title: 'Key Features',
         list: [
@@ -78,6 +86,14 @@ export const enTranslations = {
       title: 'Traceability',
       description: 'Product tracking from origin to destination with EPCIS.',
       subtitle: 'Comprehensive traceability system based on EPCIS standard for end-to-end tracking of products throughout the supply chain.',
+      mainPageFeatures: {
+        list: [
+          'EPCIS integration',
+          'Real-time tracking',
+          'Complete history',
+          'Automatic alerts'
+        ]
+      },      
       features: {
         title: 'Key Features',
         list: [
@@ -131,6 +147,14 @@ export const enTranslations = {
       title: 'Digital Product Passport',
       description: 'Digital product passport for complete product lifecycle analysis.',
       subtitle: 'Digital product passport for complete product lifecycle analysis.',
+      mainPageFeatures: {
+        list: [
+          'Carbon footprint',
+          'Material origin',
+          'Durability analysis',
+          'Recycling information'
+        ]
+      },
       features: {
         title: 'Key Features',
         list: [
@@ -164,6 +188,14 @@ export const enTranslations = {
       title: 'ESG',
       description: 'Complete Environmental, Social & Governance management.',
       subtitle: 'Complete Environmental, Social & Governance management.',
+      mainPageFeatures: {
+        list: [
+          'Environmental certificates',
+          'Equity metrics',
+          'Whistleblower system',
+          'Custom reports'
+        ]
+      },      
       environmental: {
         title: 'Environmental',
         list: [
@@ -229,6 +261,14 @@ export const enTranslations = {
       title: 'Compliance',
       description: 'EMVO integration for pharmaceutical traceability and regulations.',
       subtitle: 'EMVO integration for pharmaceutical traceability and regulations.',
+      mainPageFeatures: {
+        list: [
+          'EMVO integration',
+          'Pharmaceutical regulations',
+          'Automatic validation',
+          'Compliance alerts'
+        ]
+      },      
       features: {
         title: 'Key Features',
         list: [
@@ -278,6 +318,14 @@ export const enTranslations = {
       title: 'Reporting',
       description: 'Real-time metrics and advanced alert system.',
       subtitle: 'Real-time metrics and advanced alert system.',
+      mainPageFeatures: {
+        list: [
+          'Custom dashboards',
+          'Real-time alerts',
+          'Data export',
+          'Predictive analysis'
+        ]
+      },      
       features: {
         title: 'Key Features',
         list: [

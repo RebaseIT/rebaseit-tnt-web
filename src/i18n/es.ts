@@ -45,6 +45,14 @@ export const esTranslations = {
       title: 'Serialización',
       description: 'Generación de códigos de series únicos y etiquetas bajo el estándar GS1.',
       subtitle: 'Sistema avanzado de serialización que cumple con los estándares internacionales GS1, permitiendo una trazabilidad completa y segura de sus productos.',
+      mainPageFeatures: {
+        list: [
+          'Códigos seriales únicos',
+          'Etiquetas GS1 compatibles',
+          'Gestión de lotes',
+          'Control de producción'
+        ]
+      },
       features: {
         title: 'Características Principales',
         list: [
@@ -78,6 +86,14 @@ export const esTranslations = {
       title: 'Trazabilidad',
       description: 'Seguimiento de productos desde el origen hasta su destino con EPCIS.',
       subtitle: 'Sistema integral de trazabilidad basado en el estándar EPCIS para seguimiento end-to-end de productos en toda la cadena de suministro.',
+      mainPageFeatures: {
+        list: [
+          'Integración EPCIS',
+          'Seguimiento en tiempo real',
+          'Historial completo',
+          'Alertas automáticas'
+        ]
+      },
       features: {
         title: 'Características Principales',
         list: [
@@ -131,6 +147,14 @@ export const esTranslations = {
       title: 'Pasaporte Digital de Productos',
       description: 'Pasaporte digital de productos para análisis completo del ciclo de vida.',
       subtitle: 'Pasaporte digital de productos para análisis completo del ciclo de vida.',
+      mainPageFeatures: {
+        list: [
+          'Huella de carbono',
+          'Origen de materiales',
+          'Análisis de durabilidad',
+          'Información de reciclaje'
+        ]
+      },
       features: {
         title: 'Características Principales',
         list: [
@@ -164,6 +188,14 @@ export const esTranslations = {
       title: 'ESG',
       description: 'Gestión completa de Environmental, Social & Governance.',
       subtitle: 'Gestión completa de Environmental, Social & Governance.',
+      mainPageFeatures: {
+        list: [
+          'Certificados ambientales',
+          'Métricas de equidad',
+          'Sistema de denuncias',
+          'Reportes personalizados'
+        ]
+      },
       environmental: {
         title: 'Environmental',
         list: [
@@ -229,6 +261,14 @@ export const esTranslations = {
       title: 'Compliance',
       description: 'Integración con EMVO para trazabilidad y normativas farmacéuticas.',
       subtitle: 'Integración con EMVO para trazabilidad y normativas farmacéuticas.',
+      mainPageFeatures: {
+        list: [
+          'Integración EMVO',
+          'Normativas farmacéuticas',
+          'Validación automática',
+          'Alertas de cumplimiento'
+        ]
+      },
       features: {
         title: 'Características Principales',
         list: [
@@ -278,6 +318,14 @@ export const esTranslations = {
       title: 'Reporting',
       description: 'Métricas en tiempo real y sistema avanzado de alertas.',
       subtitle: 'Métricas en tiempo real y sistema avanzado de alertas.',
+      mainPageFeatures: {
+        list: [
+          'Dashboards personalizados',
+          'Alertas en tiempo real',
+          'Exportación de datos',
+          'Análisis predictivo'
+        ]
+      },
       features: {
         title: 'Características Principales',
         list: [
