@@ -59,7 +59,6 @@ const Hero = ({ scrollToSection }: HeroProps) => {
               <img
                 src={heroPicture}
                 className="rounded-lg shadow-xl"
-                style={{ width: "480px", height: "auto" }}
               />
             </div>
           </motion.div>
