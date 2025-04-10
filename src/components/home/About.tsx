@@ -9,26 +9,26 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 
-const testimonials = [
-  {
-    text: "La implementación de TNT ha revolucionado nuestra cadena de suministro. La trazabilidad es ahora más precisa que nunca.",
-    author: "María González",
-    company: "Farmacéutica Global S.A."
-  },
-  {
-    text: "El módulo ESG nos ha ayudado enormemente a mejorar nuestro reporting de sostenibilidad y cumplimiento normativo.",
-    author: "Carlos Rodríguez",
-    company: "Industrias Sostenibles"
-  },
-  {
-    text: "La facilidad de uso y la potencia de los dashboards de reporting han superado todas nuestras expectativas.",
-    author: "Ana Martínez",
-    company: "Logística Integral"
-  }
-];
-
 const About = () => {
   const { t } = useTranslation();
+
+  const testimonials = [
+    {
+      text: t('clients.comments.mariaGonzalez'),
+      author: "María González",
+      company: "Farmacéutica Global S.A."
+    },
+    {
+      text: t('clients.comments.carlosRodriguez'),
+      author: "Carlos Rodríguez",
+      company: "Industrias Sostenibles"
+    },
+    {
+      text: t('clients.comments.anaMartinez'),
+      author: "Ana Martínez",
+      company: "Logística Integral"
+    }
+  ];
 
   return (
     <section id="about" className="py-16 bg-white scroll-mt-16">
@@ -96,7 +96,7 @@ const About = () => {
 
         {/* Testimonials */}
         <div className="bg-secondaryHover px-4 sm:px-6 lg:px-8 py-12">
-          <h3 className="text-2xl font-bold text-gradient text-center mb-8">Lo que dicen nuestros clientes</h3>
+          <h3 className="text-2xl font-bold text-gradient text-center mb-8">{t('clients.title')}</h3>
           <Swiper
             modules={[Autoplay, Pagination]}
             spaceBetween={30}

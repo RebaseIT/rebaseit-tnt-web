@@ -29,6 +29,14 @@ export const esTranslations = {
       text: 'Equipo de soporte dedicado disponible 24/7 para garantizar la continuidad de sus operaciones.'
     }
   },
+  clients: {
+    title: 'Lo que dicen nuestros clientes',
+    comments: {
+      mariaGonzalez: 'La implementación de TNT ha revolucionado nuestra cadena de suministro. La trazabilidad es ahora más precisa que nunca.',
+      carlosRodriguez: 'El módulo ESG nos ha ayudado enormemente a mejorar nuestro reporting de sostenibilidad y cumplimiento normativo.',
+      anaMartinez: 'La facilidad de uso y la potencia de los dashboards de reporting han superado todas nuestras expectativas.'
+    }
+  },
   modules: {
     title: 'Nuestros Módulos',
     subtitle: 'Soluciones completas y modulares para cubrir todas sus necesidades de trazabilidad.',
@@ -37,6 +45,14 @@ export const esTranslations = {
       title: 'Serialización',
       description: 'Generación de códigos de series únicos y etiquetas bajo el estándar GS1.',
       subtitle: 'Sistema avanzado de serialización que cumple con los estándares internacionales GS1, permitiendo una trazabilidad completa y segura de sus productos.',
+      mainPageFeatures: {
+        list: [
+          'Códigos seriales únicos',
+          'Etiquetas GS1 compatibles',
+          'Gestión de lotes',
+          'Control de producción'
+        ]
+      },
       features: {
         title: 'Características Principales',
         list: [
@@ -70,6 +86,14 @@ export const esTranslations = {
       title: 'Trazabilidad',
       description: 'Seguimiento de productos desde el origen hasta su destino con EPCIS.',
       subtitle: 'Sistema integral de trazabilidad basado en el estándar EPCIS para seguimiento end-to-end de productos en toda la cadena de suministro.',
+      mainPageFeatures: {
+        list: [
+          'Integración EPCIS',
+          'Seguimiento en tiempo real',
+          'Historial completo',
+          'Alertas automáticas'
+        ]
+      },
       features: {
         title: 'Características Principales',
         list: [
@@ -123,6 +147,14 @@ export const esTranslations = {
       title: 'Pasaporte Digital de Productos',
       description: 'Pasaporte digital de productos para análisis completo del ciclo de vida.',
       subtitle: 'Pasaporte digital de productos para análisis completo del ciclo de vida.',
+      mainPageFeatures: {
+        list: [
+          'Huella de carbono',
+          'Origen de materiales',
+          'Análisis de durabilidad',
+          'Información de reciclaje'
+        ]
+      },
       features: {
         title: 'Características Principales',
         list: [
@@ -156,6 +188,14 @@ export const esTranslations = {
       title: 'ESG',
       description: 'Gestión completa de Environmental, Social & Governance.',
       subtitle: 'Gestión completa de Environmental, Social & Governance.',
+      mainPageFeatures: {
+        list: [
+          'Certificados ambientales',
+          'Métricas de equidad',
+          'Sistema de denuncias',
+          'Reportes personalizados'
+        ]
+      },
       environmental: {
         title: 'Environmental',
         list: [
@@ -221,6 +261,14 @@ export const esTranslations = {
       title: 'Compliance',
       description: 'Integración con EMVO para trazabilidad y normativas farmacéuticas.',
       subtitle: 'Integración con EMVO para trazabilidad y normativas farmacéuticas.',
+      mainPageFeatures: {
+        list: [
+          'Integración EMVO',
+          'Normativas farmacéuticas',
+          'Validación automática',
+          'Alertas de cumplimiento'
+        ]
+      },
       features: {
         title: 'Características Principales',
         list: [
@@ -270,6 +318,14 @@ export const esTranslations = {
       title: 'Reporting',
       description: 'Métricas en tiempo real y sistema avanzado de alertas.',
       subtitle: 'Métricas en tiempo real y sistema avanzado de alertas.',
+      mainPageFeatures: {
+        list: [
+          'Dashboards personalizados',
+          'Alertas en tiempo real',
+          'Exportación de datos',
+          'Análisis predictivo'
+        ]
+      },
       features: {
         title: 'Características Principales',
         list: [
@@ -337,6 +393,33 @@ export const esTranslations = {
         'Almacenamiento estándar',
         'Actualizaciones incluidas'
       ]
+    },
+    full: {
+      description: 'Perfecto para empresas medianas',
+      price: 'Consultar precio',
+      features: [
+        'Hasta 20 millones de items/año',
+        'Soporte 24/7 por correo y teléfono',
+        '20 usuarios incluidos',
+        'Acceso web y API',
+        'Gestión de permisos avanzados',
+        'Infraestructura escalable',
+        'Redundancia incluida'
+      ]
+    },
+    enterprise: {
+      description: 'Solución para grandes industrias',
+      price: 'Consultar precio',
+      features: [
+        'Hasta 20.000 millones de items/año',
+        'Soporte 24/7 prioritario',
+        'Usuarios ilimitados',
+        'API personalizada',
+        'Personalización completa',
+        'Infraestructura dedicada',
+        'Alta disponibilidad',
+        'Acuerdo de nivel de servicio (SLA)'
+      ]
     }
   },
   contact: {
@@ -358,5 +441,65 @@ export const esTranslations = {
     privacy: 'Política de Privacidad',
     terms: 'Términos y Condiciones',
     rights: 'Todos los derechos reservados.'
+  },
+  privacy: {
+    title: 'Política de Privacidad',
+    intro:
+      'En Rebase IT T&T, nos tomamos muy en serio la privacidad de nuestros usuarios. Esta política describe cómo recopilamos, usamos y protegemos su información personal.',
+    collection: {
+      title: 'Recopilación de Información',
+      description: 'Recopilamos información que usted nos proporciona directamente cuando:',
+      items: {
+        register: 'Se registra en nuestra plataforma',
+        use: 'Utiliza nuestros servicios',
+        support: 'Se comunica con nuestro equipo de soporte',
+        research: 'Participa en encuestas o investigaciones'
+      }
+    },
+    usage: {
+      title: 'Uso de la Información',
+      description: 'Utilizamos su información para:',
+      items: {
+        provide: 'Proporcionar y mantener nuestros servicios',
+        improve: 'Mejorar y personalizar su experiencia',
+        communicate: 'Comunicarnos con usted sobre actualizaciones o cambios',
+        security: 'Proteger la seguridad de nuestros usuarios'
+      }
+    },
+    protection: {
+      title: 'Protección de Datos',
+      description:
+        'Implementamos medidas de seguridad técnicas y organizativas apropiadas para proteger sus datos personales contra el acceso no autorizado, la modificación, divulgación o destrucción.'
+    },
+    lastUpdated: 'Última actualización'
+  },
+  terms: {
+    title: 'Términos y Condiciones',
+    intro: 'Al utilizar los servicios de Rebase T&T, usted acepta cumplir y estar sujeto a los siguientes términos y condiciones.',
+    usage: {
+      title: 'Uso del Servicio',
+      description: 'Nuestros servicios están diseñados para:',
+      items: {
+        traceability: 'Proporcionar soluciones de trazabilidad empresarial',
+        compliance: 'Facilitar el cumplimiento normativo',
+        visibility: 'Mejorar la visibilidad de la cadena de suministro',
+        optimization: 'Optimizar procesos operativos'
+      }
+    },
+    responsibilities: {
+      title: 'Responsabilidades del Usuario',
+      description: 'Como usuario de nuestros servicios, usted se compromete a:',
+      items: {
+        accurateInfo: 'Proporcionar información precisa y actualizada',
+        confidentiality: 'Mantener la confidencialidad de sus credenciales',
+        ethicalUse: 'Utilizar el servicio de manera ética y legal',
+        intellectualProperty: 'Respetar los derechos de propiedad intelectual'
+      }
+    },
+    limitation: {
+      title: 'Limitación de Responsabilidad',
+      description: 'Rebase IT T&T no será responsable por daños indirectos, incidentales o consecuentes que surjan del uso o la imposibilidad de usar nuestros servicios.'
+    },
+    lastUpdated: 'Última actualización'
   }
 };

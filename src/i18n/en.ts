@@ -29,6 +29,14 @@ export const enTranslations = {
       text: 'Dedicated support team available 24/7 to ensure continuity of your operations.'
     }
   },
+  clients: {
+    title: 'What our clients say',
+    comments: {
+      mariaGonzalez: 'The implementation of TNT has revolutionized our supply chain. Traceability is now more accurate than ever.',
+      carlosRodriguez: 'The ESG module has greatly helped us improve our sustainability reporting and regulatory compliance.',
+      anaMartinez: 'The ease of use and the power of the reporting dashboards have exceeded all our expectations.'
+    }
+  },
   modules: {
     title: 'Our Modules',
     subtitle: 'Complete and modular solutions to cover all your traceability needs.',
@@ -37,6 +45,14 @@ export const enTranslations = {
       title: 'Serialization',
       description: 'Generation of unique serial codes and labels under GS1 standard.',
       subtitle: 'Advanced serialization system that complies with international GS1 standards, enabling complete and secure product traceability.',
+      mainPageFeatures: {
+        list: [
+          'Unique serial codes',
+          'GS1-compliant labels',
+          'Batch management',
+          'Production control'
+        ]
+      },
       features: {
         title: 'Key Features',
         list: [
@@ -70,6 +86,14 @@ export const enTranslations = {
       title: 'Traceability',
       description: 'Product tracking from origin to destination with EPCIS.',
       subtitle: 'Comprehensive traceability system based on EPCIS standard for end-to-end tracking of products throughout the supply chain.',
+      mainPageFeatures: {
+        list: [
+          'EPCIS integration',
+          'Real-time tracking',
+          'Complete history',
+          'Automatic alerts'
+        ]
+      },      
       features: {
         title: 'Key Features',
         list: [
@@ -123,6 +147,14 @@ export const enTranslations = {
       title: 'Digital Product Passport',
       description: 'Digital product passport for complete product lifecycle analysis.',
       subtitle: 'Digital product passport for complete product lifecycle analysis.',
+      mainPageFeatures: {
+        list: [
+          'Carbon footprint',
+          'Material origin',
+          'Durability analysis',
+          'Recycling information'
+        ]
+      },
       features: {
         title: 'Key Features',
         list: [
@@ -156,6 +188,14 @@ export const enTranslations = {
       title: 'ESG',
       description: 'Complete Environmental, Social & Governance management.',
       subtitle: 'Complete Environmental, Social & Governance management.',
+      mainPageFeatures: {
+        list: [
+          'Environmental certificates',
+          'Equity metrics',
+          'Whistleblower system',
+          'Custom reports'
+        ]
+      },      
       environmental: {
         title: 'Environmental',
         list: [
@@ -221,6 +261,14 @@ export const enTranslations = {
       title: 'Compliance',
       description: 'EMVO integration for pharmaceutical traceability and regulations.',
       subtitle: 'EMVO integration for pharmaceutical traceability and regulations.',
+      mainPageFeatures: {
+        list: [
+          'EMVO integration',
+          'Pharmaceutical regulations',
+          'Automatic validation',
+          'Compliance alerts'
+        ]
+      },      
       features: {
         title: 'Key Features',
         list: [
@@ -270,6 +318,14 @@ export const enTranslations = {
       title: 'Reporting',
       description: 'Real-time metrics and advanced alert system.',
       subtitle: 'Real-time metrics and advanced alert system.',
+      mainPageFeatures: {
+        list: [
+          'Custom dashboards',
+          'Real-time alerts',
+          'Data export',
+          'Predictive analysis'
+        ]
+      },      
       features: {
         title: 'Key Features',
         list: [
@@ -324,7 +380,47 @@ export const enTranslations = {
   },
   solutions: {
     title: 'Our Solutions',
-    subtitle: 'Choose the plan that best fits your company\'s needs.'
+    subtitle: 'Choose the plan that best fits your company\'s needs.',
+    light: {
+      name: 'T&T Light',
+      description: 'Ideal for small industries',
+      price: 'Contact for pricing',
+      features: [
+        'Up to 5 million items/year',
+        'Email support',
+        '10 users included',
+        'Basic web access',
+        'Standard storage',
+        'Updates included'
+      ]
+    },
+    full: {
+      description: 'Perfect for medium-sized companies',
+      price: 'Contact for pricing',
+      features: [
+        'Up to 20 million items/year',
+        '24/7 email and phone support',
+        '20 users included',
+        'Web and API access',
+        'Advanced permission management',
+        'Scalable infrastructure',
+        'Redundancy included'
+      ]
+    },
+    enterprise: {
+      description: 'Solution for large industries',
+      price: 'Contact for pricing',
+      features: [
+        'Up to 20 billion items/year',
+        'Priority 24/7 support',
+        'Unlimited users',
+        'Custom API',
+        'Full customization',
+        'Dedicated infrastructure',
+        'High availability',
+        'Service Level Agreement (SLA)'
+      ]
+    }    
   },
   contact: {
     title: 'Contact Us',
@@ -345,5 +441,65 @@ export const enTranslations = {
     privacy: 'Privacy Policy',
     terms: 'Terms & Conditions',
     rights: 'All rights reserved.'
+  },
+  privacy: {
+    title: 'Privacy Policy',
+    intro:
+      "At Rebase IT T&T, we take our users' privacy very seriously. This policy describes how we collect, use, and protect your personal information.",
+    collection: {
+      title: 'Information Collection',
+      description: 'We collect information you provide directly when you:',
+      items: {
+        register: 'Register on our platform',
+        use: 'Use our services',
+        support: 'Contact our support team',
+        research: 'Participate in surveys or research'
+      }
+    },
+    usage: {
+      title: 'Use of Information',
+      description: 'We use your information to:',
+      items: {
+        provide: 'Provide and maintain our services',
+        improve: 'Improve and personalize your experience',
+        communicate: 'Communicate updates or changes with you',
+        security: 'Protect the safety of our users'
+      }
+    },
+    protection: {
+      title: 'Data Protection',
+      description:
+        'We implement appropriate technical and organizational security measures to protect your personal data from unauthorized access, modification, disclosure, or destruction.'
+    },
+    lastUpdated: 'Last updated'
+  },
+  terms: {
+    title: 'Terms and Conditions',
+    intro: 'By using the services of Rebase T&T, you agree to comply with and be bound by the following terms and conditions.',
+    usage: {
+      title: 'Service Usage',
+      description: 'Our services are designed to:',
+      items: {
+        traceability: 'Provide business traceability solutions',
+        compliance: 'Facilitate regulatory compliance',
+        visibility: 'Enhance supply chain visibility',
+        optimization: 'Optimize operational processes'
+      }
+    },
+    responsibilities: {
+      title: 'User Responsibilities',
+      description: 'As a user of our services, you agree to:',
+      items: {
+        accurateInfo: 'Provide accurate and up-to-date information',
+        confidentiality: 'Keep your credentials confidential',
+        ethicalUse: 'Use the service in an ethical and legal manner',
+        intellectualProperty: 'Respect intellectual property rights'
+      }
+    },
+    limitation: {
+      title: 'Limitation of Liability',
+      description: 'Rebase IT T&T shall not be liable for indirect, incidental, or consequential damages arising from the use or inability to use our services.'
+    },
+    lastUpdated: 'Last updated'
   }
 };

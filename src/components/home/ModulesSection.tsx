@@ -73,7 +73,7 @@ const ModulesSection = () => {
                   {t(`modules.${module.id}.description`)}
                 </p>
                 <ul className="space-y-2">
-                  {module.features.slice(0, 3).map((feature, index) => (
+                  {t(`modules.${module.id}.mainPageFeatures.list`, { returnObjects: true }).map((feature, index) => (
                     <li key={index} className="flex items-center text-gray-600">
                       <span className="h-1.5 w-1.5 bg-primary rounded-full mr-2"></span>
                       {feature}

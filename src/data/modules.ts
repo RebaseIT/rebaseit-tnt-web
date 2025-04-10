@@ -167,45 +167,15 @@ export const modules = [
 
 export const solutions = [
   {
-    name: 'T&T Light',
-    description: 'Ideal para pequeñas industrias',
-    price: 'Consultar precio',
-    features: [
-      'Hasta 5 millones de items/año',
-      'Soporte por correo electrónico',
-      '10 usuarios incluidos',
-      'Acceso web básico',
-      'Almacenamiento estándar',
-      'Actualizaciones incluidas'
-    ]
+    id: 'light',
+    name: 'T&T Light'
   },
   {
-    name: 'T&T Full',
-    description: 'Perfecto para empresas medianas',
-    price: 'Consultar precio',
-    features: [
-      'Hasta 20 millones de items/año',
-      'Soporte 24/7 por correo y teléfono',
-      '20 usuarios incluidos',
-      'Acceso web y API',
-      'Gestión de permisos avanzados',
-      'Infraestructura escalable',
-      'Redundancia incluida'
-    ]
+    id: 'full',
+    name: 'T&T Full'
   },
   {
-    name: 'T&T Enterprise',
-    description: 'Solución para grandes industrias',
-    price: 'Consultar precio',
-    features: [
-      'Hasta 20.000 millones de items/año',
-      'Soporte 24/7 prioritario',
-      'Usuarios ilimitados',
-      'API personalizada',
-      'Personalización completa',
-      'Infraestructura dedicada',
-      'Alta disponibilidad',
-      'Acuerdo de nivel de servicio (SLA)'
-    ]
+    id: 'enterprise',
+    name: 'T&T Enterprise'
   }
 ];
