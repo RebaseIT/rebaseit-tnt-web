@@ -441,5 +441,65 @@ export const esTranslations = {
     privacy: 'Política de Privacidad',
     terms: 'Términos y Condiciones',
     rights: 'Todos los derechos reservados.'
+  },
+  privacy: {
+    title: 'Política de Privacidad',
+    intro:
+      'En Rebase IT T&T, nos tomamos muy en serio la privacidad de nuestros usuarios. Esta política describe cómo recopilamos, usamos y protegemos su información personal.',
+    collection: {
+      title: 'Recopilación de Información',
+      description: 'Recopilamos información que usted nos proporciona directamente cuando:',
+      items: {
+        register: 'Se registra en nuestra plataforma',
+        use: 'Utiliza nuestros servicios',
+        support: 'Se comunica con nuestro equipo de soporte',
+        research: 'Participa en encuestas o investigaciones'
+      }
+    },
+    usage: {
+      title: 'Uso de la Información',
+      description: 'Utilizamos su información para:',
+      items: {
+        provide: 'Proporcionar y mantener nuestros servicios',
+        improve: 'Mejorar y personalizar su experiencia',
+        communicate: 'Comunicarnos con usted sobre actualizaciones o cambios',
+        security: 'Proteger la seguridad de nuestros usuarios'
+      }
+    },
+    protection: {
+      title: 'Protección de Datos',
+      description:
+        'Implementamos medidas de seguridad técnicas y organizativas apropiadas para proteger sus datos personales contra el acceso no autorizado, la modificación, divulgación o destrucción.'
+    },
+    lastUpdated: 'Última actualización'
+  },
+  terms: {
+    title: 'Términos y Condiciones',
+    intro: 'Al utilizar los servicios de Rebase T&T, usted acepta cumplir y estar sujeto a los siguientes términos y condiciones.',
+    usage: {
+      title: 'Uso del Servicio',
+      description: 'Nuestros servicios están diseñados para:',
+      items: {
+        traceability: 'Proporcionar soluciones de trazabilidad empresarial',
+        compliance: 'Facilitar el cumplimiento normativo',
+        visibility: 'Mejorar la visibilidad de la cadena de suministro',
+        optimization: 'Optimizar procesos operativos'
+      }
+    },
+    responsibilities: {
+      title: 'Responsabilidades del Usuario',
+      description: 'Como usuario de nuestros servicios, usted se compromete a:',
+      items: {
+        accurateInfo: 'Proporcionar información precisa y actualizada',
+        confidentiality: 'Mantener la confidencialidad de sus credenciales',
+        ethicalUse: 'Utilizar el servicio de manera ética y legal',
+        intellectualProperty: 'Respetar los derechos de propiedad intelectual'
+      }
+    },
+    limitation: {
+      title: 'Limitación de Responsabilidad',
+      description: 'Rebase IT T&T no será responsable por daños indirectos, incidentales o consecuentes que surjan del uso o la imposibilidad de usar nuestros servicios.'
+    },
+    lastUpdated: 'Última actualización'
   }
 };

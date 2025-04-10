@@ -441,5 +441,65 @@ export const enTranslations = {
     privacy: 'Privacy Policy',
     terms: 'Terms & Conditions',
     rights: 'All rights reserved.'
+  },
+  privacy: {
+    title: 'Privacy Policy',
+    intro:
+      "At Rebase IT T&T, we take our users' privacy very seriously. This policy describes how we collect, use, and protect your personal information.",
+    collection: {
+      title: 'Information Collection',
+      description: 'We collect information you provide directly when you:',
+      items: {
+        register: 'Register on our platform',
+        use: 'Use our services',
+        support: 'Contact our support team',
+        research: 'Participate in surveys or research'
+      }
+    },
+    usage: {
+      title: 'Use of Information',
+      description: 'We use your information to:',
+      items: {
+        provide: 'Provide and maintain our services',
+        improve: 'Improve and personalize your experience',
+        communicate: 'Communicate updates or changes with you',
+        security: 'Protect the safety of our users'
+      }
+    },
+    protection: {
+      title: 'Data Protection',
+      description:
+        'We implement appropriate technical and organizational security measures to protect your personal data from unauthorized access, modification, disclosure, or destruction.'
+    },
+    lastUpdated: 'Last updated'
+  },
+  terms: {
+    title: 'Terms and Conditions',
+    intro: 'By using the services of Rebase T&T, you agree to comply with and be bound by the following terms and conditions.',
+    usage: {
+      title: 'Service Usage',
+      description: 'Our services are designed to:',
+      items: {
+        traceability: 'Provide business traceability solutions',
+        compliance: 'Facilitate regulatory compliance',
+        visibility: 'Enhance supply chain visibility',
+        optimization: 'Optimize operational processes'
+      }
+    },
+    responsibilities: {
+      title: 'User Responsibilities',
+      description: 'As a user of our services, you agree to:',
+      items: {
+        accurateInfo: 'Provide accurate and up-to-date information',
+        confidentiality: 'Keep your credentials confidential',
+        ethicalUse: 'Use the service in an ethical and legal manner',
+        intellectualProperty: 'Respect intellectual property rights'
+      }
+    },
+    limitation: {
+      title: 'Limitation of Liability',
+      description: 'Rebase IT T&T shall not be liable for indirect, incidental, or consequential damages arising from the use or inability to use our services.'
+    },
+    lastUpdated: 'Last updated'
   }
 };
