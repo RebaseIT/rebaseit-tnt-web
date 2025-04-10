@@ -32,7 +32,7 @@ export const enTranslations = {
   clients: {
     title: 'What our clients say',
     comments: {
-      mariaGonzalez: 'The implementation of TNT has revolutionized our supply chain. Traceability is now more accurate than ever.',
+      mariaGonzalez: 'The implementation of Rebase Track & Trace has revolutionized our supply chain. Traceability is now more accurate than ever.',
       carlosRodriguez: 'The ESG module has greatly helped us improve our sustainability reporting and regulatory compliance.',
       anaMartinez: 'The ease of use and the power of the reporting dashboards have exceeded all our expectations.'
     }

@@ -47,7 +47,7 @@ const About = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -95,7 +95,7 @@ const About = () => {
         </div>
 
         {/* Testimonials */}
-        <div className="bg-secondaryHover px-4 sm:px-6 lg:px-8 py-12">
+        {/* <div className="bg-secondaryHover px-4 sm:px-6 lg:px-8 py-12">
           <h3 className="text-2xl font-bold text-gradient text-center mb-8">{t('clients.title')}</h3>
           <Swiper
             modules={[Autoplay, Pagination]}
@@ -118,7 +118,7 @@ const About = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -32,7 +32,7 @@ export const esTranslations = {
   clients: {
     title: 'Lo que dicen nuestros clientes',
     comments: {
-      mariaGonzalez: 'La implementación de TNT ha revolucionado nuestra cadena de suministro. La trazabilidad es ahora más precisa que nunca.',
+      mariaGonzalez: 'La implementación de Rebase Track & Trace ha revolucionado nuestra cadena de suministro. La trazabilidad es ahora más precisa que nunca.',
       carlosRodriguez: 'El módulo ESG nos ha ayudado enormemente a mejorar nuestro reporting de sostenibilidad y cumplimiento normativo.',
       anaMartinez: 'La facilidad de uso y la potencia de los dashboards de reporting han superado todas nuestras expectativas.'
     }
