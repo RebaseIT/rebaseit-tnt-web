@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, Hexagon, Globe } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import logo from "../public/logos/TrackAndTraceLogo.png";
+import logo from "../public/logos/TrackAndTraceLogo630px.jpg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
