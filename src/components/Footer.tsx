@@ -2,7 +2,7 @@ import React from 'react';
 import { Linkedin, Mail, Phone} from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import logo from "../public/logos/ReBaseLogo630px.png";
+import logo from "../public/logos/ReBaseLogo.png";
 
 const Footer = () => {
   const { t } = useTranslation();
